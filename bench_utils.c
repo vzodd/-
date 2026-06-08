@@ -6,7 +6,7 @@
 /*   By: jorvilch <jorvilch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:05:19 by jorvilch          #+#    #+#             */
-/*   Updated: 2026/06/08 08:51:59 by jorvilch         ###   ########.fr       */
+/*   Updated: 2026/06/03 12:22:11 by jorvilch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,19 @@ void	compute_disorder_dec(int total, int limit)
 static char	*get_strategy(int mode, float disorder)
 {
 	if (mode == 1)
-		return ("Simple / O(n²)");
+		return("Simple / O(n²)");
 	else if (mode == 2)
-		return ("Medium / O(n·√n)");
+		return("Medium / O(n·√n)");
 	else if (mode == 3)
-		return ("Complex / O(n·log(n))");
+		return("Complex / O(n·log(n))");
 	else
 	{
 		if (disorder < 0.2)
-			return ("Adaptive / O(n²)");
+			return("Adaptive / O(n²)");
 		else if (disorder < 0.5)
-			return ("Adaptive / O(n·√n)");
+			return("Adaptive / O(n·√n)");
 		else
-			return ("Adaptive / O(n·log(n))");
+			return("Adaptive / O(n·log(n))");
 	}
 }
 
